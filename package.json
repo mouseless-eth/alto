@@ -9,7 +9,7 @@
     "scripts": {
         "clean": "rm -rf ./src/lib ./src/*.tsbuildinfo",
         "clean-modules": "rm -rf ./src/node_modules node_modules",
-        "postinstall": "pnpm run build",
+        "postinstall": "pnpm -r --filter src run build",
         "build": "pnpm -r run build",
         "start": "node src/lib/cli/alto.js run",
         "dev": "pnpm -r run dev",

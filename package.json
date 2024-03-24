@@ -5,9 +5,11 @@
     "repository": "https://github.com/pimlicolabs/alto.git",
     "author": "Pimlico",
     "license": "GPL-3.0-or-later",
+    "bin": "./alto",
     "scripts": {
         "clean": "rm -rf ./src/lib ./src/*.tsbuildinfo",
         "clean-modules": "rm -rf ./src/node_modules node_modules",
+        "postinstall": "pnpm run build",
         "build": "pnpm -r run build",
         "start": "node src/lib/cli/alto.js run",
         "dev": "pnpm -r run dev",
@@ -33,9 +35,6 @@
     "engines": {
         "node": ">=18.0.0"
     },
-    "workspaces": [
-        "src/",
-        "test/e2e/*"
-    ],
+    "workspaces": ["src/", "test/e2e/*"],
     "packageManager": "pnpm@8.15.4+sha256.cea6d0bdf2de3a0549582da3983c70c92ffc577ff4410cbf190817ddc35137c2"
 }

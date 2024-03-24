@@ -1,3 +1,3 @@
-#!/usr/bin/env bash
+#!/usr/bin/env node
 
-pnpm start "$@"
+./src/lib/cli/alto.js
